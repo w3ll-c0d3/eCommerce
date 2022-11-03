@@ -7,7 +7,6 @@ const App = () => {
     <>
       <GlobalStyle />
       <Root />
-      <div>App</div>
     </>
   )
 }

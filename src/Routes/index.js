@@ -7,7 +7,7 @@ export const Root = () => {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/inicio" element={ <PaginaInicial /> } />
+            <Route path="/" element={ <PaginaInicial /> } />
         </Routes> 
     </BrowserRouter>
   )

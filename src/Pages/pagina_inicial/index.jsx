@@ -1,7 +1,11 @@
 import React from 'react'
+import { Navigation } from "../../Components";
 
 export const PaginaInicial = () => {
   return (
-    <h1>Pagina Inicial</h1>
+    <>
+      <Navigation />
+      <h1>Pagina Inicial</h1>
+    </>
 )
 }
