@@ -1,8 +1,12 @@
 import React from 'react'
+import GlobalStyle from './GlobalStyle/globalStyle';
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <GlobalStyle />
+      <div>App</div>
+    </>
   )
 }
 
