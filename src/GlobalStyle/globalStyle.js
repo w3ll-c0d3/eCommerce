@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: var(--bg-color);
     }
+
+    main {
+        margin-top: 2rem;
+    }
 `;
 
 export default GlobalStyle;
