@@ -1,11 +1,12 @@
 import React from 'react'
-import { Navigation, Produtos } from "../../Components";
+import { Footer, Navigation, Produtos } from "../../Components";
 
 const PaginaInicial = () => {
   return (
     <>
       <Navigation />
       <Produtos />
+      <Footer />
     </>
 )
 }

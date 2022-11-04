@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PaginaInicial, DetalhesProduto } from "../Pages/";
+import { PaginaInicial, DetalhesProduto, QuemSomos } from "../Pages/";
 
 
 export const Root = () => {
@@ -9,6 +9,7 @@ export const Root = () => {
         <Routes>
             <Route path="/" element={ <PaginaInicial /> } />
             <Route path={`/produto/${1}`} element={ <DetalhesProduto /> } />
+            <Route path="/quemsomos" element = {<QuemSomos/>}/>
         </Routes> 
     </BrowserRouter>
   )
