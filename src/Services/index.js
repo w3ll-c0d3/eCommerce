@@ -1,6 +1,6 @@
 // exportar APIs deste arquivo
-// import axios from "axios";
+import axios from "axios";
 
-// export const api = axios.create({
-//     baseURL: ""
-// })
+export const gitApi = axios.create({
+    baseURL: "https://api.github.com/users"
+})
