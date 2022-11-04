@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Navigation() {
   return (
     <header id="header">
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light">
         <Container>
           <Navbar.Brand href="#home">Grupo 4</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -15,6 +15,7 @@ function Navigation() {
             <Nav className="me-auto">
               <Nav.Link href="/">Página Inicial</Nav.Link>
               <Nav.Link href="/quemsomos">Quem somos</Nav.Link>
+              <Nav.Link href="/Admin">Admin</Nav.Link>
               {/* <Link to={`/quemsomos`}>Quem Somos</Link> */}
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
