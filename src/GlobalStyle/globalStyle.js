@@ -21,6 +21,26 @@ const GlobalStyle = createGlobalStyle`
     main {
         margin-top: 2rem;
     }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 300px;
+        margin-top: 5rem;
+        width: 100vw;
+        background-color: var(--secondary-color);
+    }
+
+    footer a {
+        text-decoration: none;
+        color: var(--bg-color);
+    }
+
+    footer :active {
+        color: blue;
+    }
 `;
 
 export default GlobalStyle;
