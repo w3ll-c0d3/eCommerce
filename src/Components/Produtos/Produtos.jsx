@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
 import Produto from "./Produto/Produto";
-import MainS from "./style";
 
 // Produtos mocados
 const produtos = [

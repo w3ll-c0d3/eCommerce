@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigation, Produtos } from "../../Components";
 
-export const PaginaInicial = () => {
+const PaginaInicial = () => {
   return (
     <>
       <Navigation />
@@ -9,3 +9,5 @@ export const PaginaInicial = () => {
     </>
 )
 }
+
+export default PaginaInicial
