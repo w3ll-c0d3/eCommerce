@@ -13,8 +13,9 @@ function Navigation() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Página Inicial</Nav.Link>
-              <Link to={`/quemsomos`}>Quem Somos</Link>
+              <Nav.Link href="/">Página Inicial</Nav.Link>
+              <Nav.Link href="/quemsomos">Quem somos</Nav.Link>
+              {/* <Link to={`/quemsomos`}>Quem Somos</Link> */}
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
