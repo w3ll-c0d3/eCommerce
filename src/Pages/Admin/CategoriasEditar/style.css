@@ -1,0 +1,30 @@
+h3{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+h5{
+    text-align: center;
+}
+input{
+    border: groove;
+    border-radius: 5px;
+}
+textarea{
+    border: groove;
+    border-radius: 5px;
+}
+form{
+    text-align: center;
+}
+label{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.button-options-cadastrar{
+    background-color: #31be22;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    margin-top: 2rem;
+}
