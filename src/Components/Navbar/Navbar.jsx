@@ -1,10 +1,18 @@
+import { ShoppingCart } from '@material-ui/icons';
+import { NavItem } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import { Cart } from '../../Pages/cart';
+import {useCart} from '../cartContext'
+import { IconButton, Badge } from '@material-ui/core';
 
 function Navigation() {
+  const cart = useCart()
+  const itemsCount = Object.keys(cart.cart).length
+
   return (
     <header id="header">
       <Navbar bg="light">
@@ -30,6 +38,19 @@ function Navigation() {
               </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
+          <Nav.Link href="/cart">
+          <IconButton aria-lable="Show cart items" color="inherit">
+                <Badge badgeContent={itemsCount > 0 && <span>{itemsCount}</span>} color="secondary">
+                    <ShoppingCart />
+                </Badge>
+          </IconButton>
+          </Nav.Link>
+          {/* <Nav.Link href='/cart' >
+            <button>
+            Carrinho
+            </button>
+          {itemsCount > 0 && <span>({itemsCount})</span>}
+          </Nav.Link> */}
         </Container>
       </Navbar>
     </header>

@@ -1,7 +1,7 @@
-import React from 'react'
 import { Card, Button } from 'react-bootstrap';
+import { useCart } from '../../cartContext';
 
-const Produto = ({ produto }) => {
+export const Produto = ({ produto}) => {
   const containerStyle = {
     cursor: 'pointer',
     maxWidth: '100%',
@@ -21,6 +21,16 @@ const Produto = ({ produto }) => {
     margin: "5px 0 5px 0"
   }
 
+  const cart = useCart()
+  const add = produto =>()=>{
+    cart.addToCart(produto)
+  }
+  
+
+  // const handleAddToCart = () => onAddToCart(produto.id, 1);
+
+
+
   return (
     <>
         <Card style={ containerStyle } id={produto.id}>
@@ -31,7 +41,7 @@ const Produto = ({ produto }) => {
                 {produto.description}
             </Card.Text>
             <Card.Subtitle style={ subTitle }>Valor R$<span> {produto.price}</span></Card.Subtitle>
-            <Button variant="primary">Buy</Button>
+            <Button onClick={add(produto)} variant="primary">Buy</Button>
           </Card.Body>
         </Card>
     </>
