@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from "react";
 import { gitApi } from "../../Services";
-import { Navigation } from "../../Components";
-import { Container, ContainerContent, Card } from "./style";
+import { Navigation, Footer } from "../../Components";
+import { Container, ContainerContent, Card, Foto } from "./style";
 
 
 export const QuemSomos = () => {
@@ -56,15 +56,17 @@ export const QuemSomos = () => {
                 {usuarios.map((res) => {
                     return (
                         <Card>
-                            <img src={res.avatar_url} width="150px" height="150px"/>
+                            <Foto src={res.avatar_url} />
                             <div style={{ fontSize: "1.3rem" }}>{res.name}</div>
-                            {/* <div>{res.location}</div> */}
+                            <a href={res.html_url} target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"width="45px" height="45px"></img></a>
+                            <a href={res.blog} target="_blank"> <img src="https://blog.waalaxy.com/wp-content/uploads/2021/01/logo-linkedin-2003.jpg"width="140px" height="60px"></img></a>
                         </Card>
                     )
                 })}
             </ContainerContent>
-        </Container>
-
+            <Footer></Footer>   
+        </Container>      
+    
         </>
     )
 

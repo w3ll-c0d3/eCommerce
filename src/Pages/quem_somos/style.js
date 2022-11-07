@@ -31,8 +31,9 @@ export const Card = styled.div`
   border-radius: 1rem;
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
   padding: 2rem;
-  margin: 1rem;
-  width: 18rem;
+  margin: 2rem;
+  height: 23rem;
+  width: 20rem;
   justify-self: center; 
   text-align: center;
   line-height: 3rem;
@@ -46,6 +47,10 @@ export const Card = styled.div`
        
   }
 `
-
+export const Foto = styled.img`
+  width:200px;
+  height:200px;
+  border-radius: 200px;
+`
 
 
