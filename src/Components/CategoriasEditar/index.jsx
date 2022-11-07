@@ -3,18 +3,12 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Form } from 'react-bootstrap';
 import './style.css';
-import { Footer, Navigation } from "../../../Components";
 
-const AdminCategoria = () => {
+const AdminCategoriaEditar = () => {
 
     return (
       <>
-      <Navigation />
       <Container>
-        <div class="row">
-            <h3>Categorias</h3>
-            <h5>Cadastrar Categoria</h5>
-        </div>
         <Form>
           <div class="row">
             <label class="texto">Nome:</label>
@@ -27,8 +21,7 @@ const AdminCategoria = () => {
           <button type="button" class="button-options-cadastrar">Salvar</button>
         </Form>
       </Container>
-      <Footer />
       </>
     )
   }
-  export default AdminCategoria
+  export default AdminCategoriaEditar
