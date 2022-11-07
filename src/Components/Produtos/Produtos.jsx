@@ -1,24 +1,30 @@
 import React from 'react'
 import { Grid } from "@material-ui/core";
 import Produto from "./Produto/Produto";
+import { useCart } from '../cartContext';
 
 // Produtos mocados
 const produtos = [
     {id: 1, name: "Shoes", description: "Running shoes.", image: "https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png", price: "$65" },
-    {id: 2, name: "Macbook", description: "Apple Macbook.", image: "https://w7.pngwing.com/pngs/522/727/png-transparent-macbook-pro-laptop-apple-laptop-electronics-computer-laptop-thumbnail.png", price: "$105" }
+    {id: 2, name: "Macbook", description: "Apple Macbook.", image: "https://w7.pngwing.com/pngs/522/727/png-transparent-macbook-pro-laptop-apple-laptop-electronics-computer-laptop-thumbnail.png", price: "$105" },
+    {id: 3, name: "Macbook Pro", description: "Apple Macbook Pro.", image: "https://w7.pngwing.com/pngs/522/727/png-transparent-macbook-pro-laptop-apple-laptop-electronics-computer-laptop-thumbnail.png", price: "$200" }
 ];
 ////////////////////
 
-const Produtos = () => {
+export const Produtos = () => {
+    const cart = useCart()
   return (
     <main>
-        <Grid container justify="center" spacing={4}>
+        <Grid container justify="center" spacing={10}>
             {produtos.map((product) =>
                 <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
                     <Produto produto={product} /> 
                 </Grid>
             )}
         </Grid>
+        <pre>
+            {JSON.stringify(cart.cart, null, 2)}
+        </pre>
     </main>
   )
 }
