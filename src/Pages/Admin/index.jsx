@@ -5,6 +5,13 @@ import { Section } from "./style.js";
 import { Footer, Navigation, CadastrarProdutos, EditarProduto, DeletarProduto, AdminCategoria, AdminCategoriaEditar, AtualizarPedido, AtualizarCliente, CadastroCliente } from "../../Components";
 
 const AdminIndex = () => {
+
+    var showdate = new Date();
+    var displayTodaysDate = showdate.getFullYear() + "-" + showdate.getMonth() + "-" + showdate.getDate() + "T";
+    var displayTime = showdate.getHours()+":"+showdate.getMinutes()+":"+showdate.getSeconds().toFixed(3)+"Z";
+    var todaysDate = displayTodaysDate+displayTime;
+    console.log(todaysDate) 
+
     return (
       <>
       <Navigation />
@@ -47,7 +54,7 @@ const AdminIndex = () => {
             <div class="row">
                 <h2>Produtos</h2>
                 <h3>Cadastrar</h3>
-                <CadastrarProdutos />
+                <CadastrarProdutos data={todaysDate}/>
                 <h3>Atualizar</h3>
                 <EditarProduto />
                 <h3>Deletar Produto</h3>
