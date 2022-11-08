@@ -1,11 +1,13 @@
 import { Card, Button } from 'react-bootstrap';
 import { useCart } from '../../cartContext';
+import {Bto, Dbt} from './style'
 
 export const Produto = ({ produto}) => {
   const containerStyle = {
     cursor: 'pointer',
     maxWidth: '100%',
-    minHeight: '100%',
+    minHeight: '100%'
+    
   }
 
   const imgStyle = {
@@ -42,11 +44,11 @@ export const Produto = ({ produto}) => {
                 {produto.categoria.nome}
             </Card.Text>
             <Card.Subtitle style={ subTitle }><span><b>R$ {produto.valorUnitario}</b></span></Card.Subtitle>
-            <Button onClick={add(produto)} variant="primary" color="#ff5c5c">Buy</Button>
+            <Bto  onClick={add(produto)} variant="primary">Comprar</Bto>
           </Card.Body>
         </Card>
     </>
   )
 }
 
-export default Produto
+export default Produto;

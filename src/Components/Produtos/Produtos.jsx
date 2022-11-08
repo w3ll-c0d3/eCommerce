@@ -3,6 +3,7 @@ import { Grid } from "@material-ui/core";
 import Produto from "./Produto/Produto";
 import { useCart } from '../cartContext';
 import { ecommerceAPI } from '../../Services';
+import { Sep } from './style';
 
 // Produtos mocados
 // const produtos = [
@@ -28,7 +29,7 @@ export const Produtos = () => {
     }, [])
   return (
     <main>
-        
+        <Sep>
         <Grid container justifyContent="center" spacing={8}>
             {produto.map((product) =>
                 <Grid item key={product.id} xs={10} sm={5} md={4} lg={2}>
@@ -37,6 +38,7 @@ export const Produtos = () => {
                 </Grid>
             )}
         </Grid>
+        </Sep>
     </main>
   )
 }
