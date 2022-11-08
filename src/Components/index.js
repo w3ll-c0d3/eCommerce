@@ -13,3 +13,4 @@ export { default as AdminCategoriaEditar } from "./CategoriasEditar";
 export { default as AtualizarPedido } from "./AtualizarPedido";
 export { default as CadastroCliente } from "./CadastrarCliente";
 export { default as AtualizarCliente } from "./AtualizarCliente";
+export { default as DeletarCategoria } from "./DeletarCategoria";
