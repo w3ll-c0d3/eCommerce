@@ -8,11 +8,12 @@ import  Tudo from './style';
  const remove = id => () =>{
   cart.rmvFromCart(id)
  }
+
  const changeQtd = (id) => (evt) =>{
   cart.changeQtd(id, Number(evt.target.value))
  }
- const itemsCount = Object.keys(cart.cart).length
 
+ const itemsCount = Object.keys(cart.cart).length
  let valorTotal = 0
 
   return (
@@ -38,7 +39,6 @@ import  Tudo from './style';
                     valorTotal += subTotal
                     
                   return(
-                     
                   <div key={index} className="row mb-4 d-flex justify-content-between align-items-center"> 
                     <div className="col-md-2 col-lg-2 col-xl-2">
                       <img
@@ -83,13 +83,11 @@ import  Tudo from './style';
                   </div>
 
                   <h5 className="text-uppercase mb-3">Envio</h5>
-
                   <div className="mb-4 pb-2">
                     <select className="select">
                       <option value="1">Envio Padrão - GRÁTIS</option>
                     </select>
                   </div>
-
                   <h5 className="text-uppercase mb-3">Onde quer receber?</h5>
 
                   <div className="mb-10">
@@ -101,12 +99,10 @@ import  Tudo from './style';
                   </div>
 
                   <hr className="my-4"/>
-
                   <div className="d-flex justify-content-between mb-5">
                     <h5 className="text-uppercase">Total:</h5>
                     <h5>R${valorTotal}</h5>
                   </div>
-
                   <button type="button" className="btn btn-dark btn-block btn-lg"
                     data-mdb-ripple-color="dark">Comprar</button>
 

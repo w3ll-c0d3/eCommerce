@@ -26,18 +26,9 @@ function AtualizarPedido() {
             <option>...</option>  {/*Get all itens do pedido from API*/}
           </Form.Select>
         </Form.Group>
-        <a href="#">
-            <Button variant="secondary" style={{ backgroundColor: "red"}} type="submit">
-              Deletar Item
-            </Button>
-        </a>
      </Row>
       <Button variant="primary" type="submit">
-        Atualizar
-      </Button>
-
-      <Button variant="primary" style={{ marginLeft: "10px"}}type="submit">
-        Deletar Pedido
+        Criar pedido
       </Button>
     </Form>
   );

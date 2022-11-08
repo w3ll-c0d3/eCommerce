@@ -5,7 +5,6 @@ import { Section } from "./style.js";
 import { Footer, Navigation, CadastrarProdutos, EditarProduto, DeletarProduto, AdminCategoria, AdminCategoriaEditar, AtualizarPedido, AtualizarCliente, CadastroCliente, DeletarCategoria } from "../../Components";
 
 const AdminIndex = () => {
-
     var showdate = new Date();
     var displayTodaysDate = showdate.getFullYear() + "-" + showdate.getMonth() + "-" + showdate.getDate() + "T";
     var displayTime = showdate.getHours()+":"+showdate.getMinutes()+":"+showdate.getSeconds().toFixed(3)+"Z";
@@ -34,11 +33,6 @@ const AdminIndex = () => {
                         <button type="button" className="button-options-view">Produtos</button>
                     </a>
                 </div>
-                <div className="col">
-                    <a href="#pedidos-sec" >
-                        <button type="button" className="button-options-del">Pedidos</button>
-                    </a>
-                </div>
             </div>
         </Section>
         <Section id="categorias-sec">
@@ -63,20 +57,11 @@ const AdminIndex = () => {
                 <DeletarProduto />
             </div>
         </Section>
-        <Section id="pedidos-sec">
-            <div className="row">
-                <h2>Pedidos</h2>
-                <h3>Atualizar</h3>
-                <AtualizarPedido />
-            </div>
-        </Section>
         <Section id="clientes-sec">
             <div className="row">
                 <h2>Clientes</h2>
                 <h3>Cadastrar</h3>
                 <CadastroCliente/>
-                <h3>Atualizar</h3>
-                <AtualizarCliente />
             </div>
         </Section>
       </Container>
