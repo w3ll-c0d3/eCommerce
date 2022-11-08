@@ -16,9 +16,9 @@ export const Produtos = () => {
     const cart = useCart()
   return (
     <main>
-        <Grid container justify="center" spacing={10}>
+        <Grid container justifyContent="center" spacing={10}>
             {produtos.map((product) =>
-                <Grid item key={product.id} xs={10} sm={5} md={2.5} lg={2}>
+                <Grid item key={product.id} xs={10} sm={5} md={2} lg={2}>
                     <Produto produto={product} /> 
                 </Grid>
             )}

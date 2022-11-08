@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import './style.css';
 import { Section } from "./style.js";
@@ -38,7 +38,7 @@ const AdminIndex = () => {
             <div class="row">
                 <h2>Categorias</h2>
                 <h3>Cadastrar</h3>
-                <AdminCategoria />
+                <AdminCategoria/>
                 <h3>Atualizar</h3>
                 <AdminCategoriaEditar />
             </div>
