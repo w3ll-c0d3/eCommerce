@@ -37,9 +37,6 @@ export const Produtos = () => {
                 </Grid>
             )}
         </Grid>
-        <pre>
-            {JSON.stringify(cart.cart, null, 2)}
-        </pre>
     </main>
   )
 }

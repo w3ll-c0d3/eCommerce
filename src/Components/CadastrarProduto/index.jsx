@@ -119,7 +119,7 @@ const CadastrarProduto = props => {
       {/* </Form.Group> */}
      </Row>
 
-      <Button variant="primary" type="submit" onClick={postProduto}>
+      <Button variant="primary" onClick={postProduto}>
         Cadastrar
       </Button>
     </Form>

@@ -88,7 +88,7 @@ function EditarProduto() {
         </Form.Group>
      </Row>
 
-      <Button variant="primary" type="submit" onClick={updateProduto}>
+      <Button variant="primary" onClick={updateProduto}>
         Atualizar
       </Button>
     </Form>

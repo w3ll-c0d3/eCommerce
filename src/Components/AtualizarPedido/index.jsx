@@ -36,7 +36,7 @@ function AtualizarPedido() {
         Atualizar
       </Button>
 
-      <Button variant="primary" style={{ marginLeft: "10px"}}type="submit">
+      <Button variant="primary" style={{ marginLeft: "10px"}}>
         Deletar Pedido
       </Button>
     </Form>

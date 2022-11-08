@@ -46,7 +46,7 @@ function DeletarProduto() {
         <Form.Control placeholder="Descrição do produto"  disabled/>
       </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={deletarProduto}>
+      <Button variant="primary" onClick={deletarProduto}>
         Deletar
       </Button>
     </Form>
