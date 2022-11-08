@@ -1,7 +1,7 @@
-import React from 'react'
 import { Card, Button } from 'react-bootstrap';
+import { useCart } from '../../cartContext';
 
-const Produto = ({ produto }) => {
+export const Produto = ({ produto}) => {
   const containerStyle = {
     cursor: 'pointer',
     maxWidth: '100%',
@@ -10,20 +10,38 @@ const Produto = ({ produto }) => {
 
   const imgStyle = {
     maxWidth: '100%',
-    minHeight: '100%'
+    height: '150px'
   }
+
+  const bodyStyle = {
+    padding: "11px",
+  }
+
+  const subTitle = {
+    margin: "5px 0 5px 0"
+  }
+
+  const cart = useCart()
+  const add = produto =>()=>{
+    cart.addToCart(produto)
+  }
+  
+
+  // const handleAddToCart = () => onAddToCart(produto.id, 1);
+
+
 
   return (
     <>
         <Card style={ containerStyle } id={produto.id}>
           <Card.Img variant="top" style={ imgStyle } src={produto.image} />
-          <Card.Body>
+          <Card.Body style={bodyStyle}>
             <Card.Title>{produto.name}</Card.Title>
             <Card.Text>
                 {produto.description}
             </Card.Text>
-            <Card.Subtitle>Valor R$<span> {produto.price}</span></Card.Subtitle>
-            <Button variant="primary">Buy</Button>
+            <Card.Subtitle style={ subTitle }>Valor R$<span> {produto.price}</span></Card.Subtitle>
+            <Button onClick={add(produto)} variant="primary">Buy</Button>
           </Card.Body>
         </Card>
     </>
