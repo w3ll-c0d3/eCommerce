@@ -10,32 +10,32 @@ const AdminIndex = () => {
       <Navigation />
       <Container>
         <Section id="admin-sec">
-            <div class="row">
+            <div className="row">
                 <h2>Admin</h2>
-                <div class="col">
+                <div className="col">
                     <a href="#categorias-sec">
-                        <button type="button" class="button-options-cadastrar2">Categorias</button>
+                        <button type="button" className="button-options-cadastrar2">Categorias</button>
                     </a>
                 </div>
-                <div class="col">
+                <div className="col">
                     <a href="#clientes-sec" >
-                        <button type="button" class="button-options-editar">Clientes</button>
+                        <button type="button" className="button-options-editar">Clientes</button>
                     </a>
                 </div>
-                <div class="col">
+                <div className="col">
                     <a href="#produtos-sec">
-                        <button type="button" class="button-options-view">Produtos</button>
+                        <button type="button" className="button-options-view">Produtos</button>
                     </a>
                 </div>
-                <div class="col">
+                <div className="col">
                     <a href="#pedidos-sec" >
-                        <button type="button" class="button-options-del">Pedidos</button>
+                        <button type="button" className="button-options-del">Pedidos</button>
                     </a>
                 </div>
             </div>
         </Section>
         <Section id="categorias-sec">
-            <div class="row">
+            <div className="row">
                 <h2>Categorias</h2>
                 <h3>Cadastrar</h3>
                 <AdminCategoria/>
@@ -44,7 +44,7 @@ const AdminIndex = () => {
             </div>
         </Section>
         <Section id="produtos-sec">
-            <div class="row">
+            <div className="row">
                 <h2>Produtos</h2>
                 <h3>Cadastrar</h3>
                 <CadastrarProdutos />
@@ -55,17 +55,17 @@ const AdminIndex = () => {
             </div>
         </Section>
         <Section id="pedidos-sec">
-            <div class="row">
+            <div className="row">
                 <h2>Pedidos</h2>
                 <h3>Atualizar</h3>
                 <AtualizarPedido />
             </div>
         </Section>
         <Section id="clientes-sec">
-            <div class="row">
+            <div className="row">
                 <h2>Clientes</h2>
                 <h3>Cadastrar</h3>
-                <CadastroCliente />
+                <CadastroCliente/>
                 <h3>Atualizar</h3>
                 <AtualizarCliente />
             </div>

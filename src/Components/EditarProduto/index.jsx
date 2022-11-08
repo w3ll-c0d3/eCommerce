@@ -24,7 +24,7 @@ function EditarProduto() {
 
       <Form.Group className="mb-3" controlId="formGridDescription">
         <Form.Label>Descrição</Form.Label>
-        <Form.Control placeholder="Descrição do produto" readonly="readonly"/>
+        <Form.Control placeholder="Descrição do produto" readOnly="readOnly"/>
       </Form.Group>
 
       <Row className="mb-3">

@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Footer, Navigation } from "../../Components";
 import { useCart } from '../../Components/cartContext';
-import Produto from '../../Components/Produtos/Produto/Produto';
-import Produtos from '../../Components';
-import TituloCart, { Fundo, Tudo } from './style';
+import  Tudo from './style';
 
- export const Cart = ({produto}) => {
+ export const Cart = ({}) => {
  const cart = useCart()
  const remove = id => () =>{
   cart.rmvFromCart(id)
@@ -36,7 +34,7 @@ import TituloCart, { Fundo, Tudo } from './style';
                   <hr className="my-4"/>
                   {Object.keys(cart.cart).map((key, index) =>{
                     const {produto, qtd }  = cart.cart[key]
-                    const subTotal = produto.valorUnitario*qtd
+                    const subTotal = produto.price*qtd
                     valorTotal += subTotal
                     
                   return(
@@ -44,12 +42,12 @@ import TituloCart, { Fundo, Tudo } from './style';
                   <div key={index} className="row mb-4 d-flex justify-content-between align-items-center"> 
                     <div className="col-md-2 col-lg-2 col-xl-2">
                       <img
-                        src={produto.imagemUrl}
+                        src={produto.image}
                         className="img-fluid rounded-3" alt="produto"/>
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-3">
-                      <h6 className="text-muted">{produto.nome}</h6>
-                      <h6 className="text-black mb-0">{produto.categoria.nome}</h6>
+                      <h6 className="text-muted">{produto.name}</h6>
+                      <h6 className="text-black mb-0">teste</h6>
                       <a type='submit' onClick={remove(key)}>
                         <small>(Remover item)</small>
                       </a>

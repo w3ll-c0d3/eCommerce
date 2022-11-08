@@ -27,6 +27,7 @@ const AdminCategoriaEditar = () => {
     const updateCategoria = (e) => {
       e.preventDefault();
       ecommerceAPI.put(`/categoria/${id}`, novaCategoria).then(res => console.log("Updating...", res)).catch(err => console.log(err))
+      console.alert("Categoria atualizada com sucesso!")
     }
 
     return (
