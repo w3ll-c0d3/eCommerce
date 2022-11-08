@@ -22,7 +22,6 @@ export const Produtos = () => {
     const getProdutos = async () => {
         var item = await ecommerceAPI.get(`/produtos`)
         setProduto(item.data.content)
-        
     }
 
     useEffect(() => {

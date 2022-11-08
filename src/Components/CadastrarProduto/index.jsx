@@ -56,7 +56,20 @@ const CadastrarProduto = props => {
       ecommerceAPI.post("/produtos", novoProduto).then(res => console.log("Posting...", res)).catch(err => console.log(err))
     }
 
+    // const [categorias, setCategorias] = useState([])
+    // const getCategorias = async () => {
+    //     var response = await ecommerceAPI.get(`/categoria`);
+    //     setCategorias(response?.data.contente)
+    //   }
+      
+    //   useEffect(() => {
+    //     getCategorias();
+    //   }, [])
+      
+    //   console.log(categorias)
+
   return (
+    <>
     <Form>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridName">
@@ -90,7 +103,9 @@ const CadastrarProduto = props => {
           <Form.Label>Categoria</Form.Label>
           <Form.Select defaultValue="Categoria..." onChange={getIdCategoria}>
             <option>Categoria...</option>
-            <option>1</option>  {/*Get all categorias from API*/}
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
           </Form.Select>
         </Form.Group>
         
@@ -108,6 +123,7 @@ const CadastrarProduto = props => {
         Cadastrar
       </Button>
     </Form>
+    </>
   );
 }
 
