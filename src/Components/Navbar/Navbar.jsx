@@ -1,11 +1,7 @@
 import { ShoppingCart } from '@material-ui/icons';
-import { NavItem } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
-import { Cart } from '../../Pages/cart';
 import {useCart} from '../cartContext'
 import { IconButton, Badge } from '@material-ui/core';
 
@@ -17,7 +13,8 @@ function Navigation() {
     <header id="header">
       <Navbar bg="light">
         <Container>
-          <Navbar.Brand href="#home">Grupo 4</Navbar.Brand>
+          <Navbar.Brand href="/"> <img src="https://i.ibb.co/3k6NHZK/4u.png" alt="4You" width="65" height="35"/> 
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -39,7 +36,7 @@ function Navigation() {
             </Nav>
           </Navbar.Collapse>
           <Nav.Link href="/cart">
-          <IconButton aria-lable="Show cart items" color="inherit">
+          <IconButton aria-label="Show cart items" color="inherit">
                 <Badge badgeContent={itemsCount > 0 && <span>{itemsCount}</span>} color="secondary">
                     <ShoppingCart />
                 </Badge>

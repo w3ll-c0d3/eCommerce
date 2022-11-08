@@ -11,6 +11,7 @@ export const Produto = ({ produto}) => {
   const imgStyle = {
     maxWidth: '100%',
     height: '150px'
+    
   }
 
   const bodyStyle = {
@@ -36,12 +37,12 @@ export const Produto = ({ produto}) => {
         <Card style={ containerStyle } id={produto.id}>
           <Card.Img variant="top" style={ imgStyle } src={produto.imagemUrl} />
           <Card.Body style={bodyStyle}>
-            <Card.Title>{produto.nome}</Card.Title>
+            <Card.Title><h4>{produto.nome}</h4></Card.Title>
             <Card.Text>
-                {produto.descricao}
+                {produto.categoria.nome}
             </Card.Text>
-            <Card.Subtitle style={ subTitle }>Valor R$<span> {produto.valorUnitario}</span></Card.Subtitle>
-            <Button onClick={add(produto)} variant="primary">Buy</Button>
+            <Card.Subtitle style={ subTitle }><span><b>R$ {produto.valorUnitario}</b></span></Card.Subtitle>
+            <Button onClick={add(produto)} variant="primary" color="#ff5c5c">Buy</Button>
           </Card.Body>
         </Card>
     </>
