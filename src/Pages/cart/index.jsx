@@ -92,9 +92,12 @@ import  Tudo from './style';
 
                   <div className="mb-10">
                   <select className="select">
-                      <option value="1">Endereço 1</option>
-                      <option value="2">SEndereço 2</option>
-                      <option value="3">Endereço 3</option>
+                    <optgroup label="Casa">
+                      <option value="1">Rua Boa Vista, 300, casa A - Petrópolis RJ</option>
+                      </optgroup>
+                      <optgroup label="Trabalho">
+                      <option value="2">Rua do Imperador, 256 - Centro Petrópolis - RJ</option>
+                      </optgroup>
                     </select>
                   </div>
 
