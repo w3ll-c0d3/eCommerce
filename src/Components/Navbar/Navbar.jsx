@@ -42,12 +42,6 @@ function Navigation() {
                 </Badge>
           </IconButton>
           </Nav.Link>
-          {/* <Nav.Link href='/cart' >
-            <button>
-            Carrinho
-            </button>
-          {itemsCount > 0 && <span>({itemsCount})</span>}
-          </Nav.Link> */}
         </Container>
       </Navbar>
     </header>
