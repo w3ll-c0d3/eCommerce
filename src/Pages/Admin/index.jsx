@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import './style.css';
 import { Section } from "./style.js";
-import { Footer, Navigation, CadastrarProdutos, EditarProduto, DeletarProduto, AdminCategoria, AdminCategoriaEditar, AtualizarPedido, AtualizarCliente, CadastroCliente } from "../../Components";
+import { Footer, Navigation, CadastrarProdutos, EditarProduto, DeletarProduto, AdminCategoria, AdminCategoriaEditar, AtualizarPedido, AtualizarCliente, CadastroCliente, DeletarCategoria } from "../../Components";
 
 const AdminIndex = () => {
 
@@ -48,6 +48,8 @@ const AdminIndex = () => {
                 <AdminCategoria/>
                 <h3>Atualizar</h3>
                 <AdminCategoriaEditar />
+                <h3>Deletar</h3>
+                <DeletarCategoria />
             </div>
         </Section>
         <Section id="produtos-sec">
