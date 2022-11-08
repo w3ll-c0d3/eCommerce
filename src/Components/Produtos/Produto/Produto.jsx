@@ -44,8 +44,11 @@ export const Produto = ({ produto}) => {
                 {produto.categoria.nome}
             </Card.Text>
             <Card.Subtitle style={ subTitle }><span><b>R$ {produto.valorUnitario}</b></span></Card.Subtitle>
-            <Bto  onClick={add(produto)} variant="primary">Comprar</Bto>
           </Card.Body>
+          <div style={{padding:"1rem"}}>
+
+            <Bto  onClick={add(produto)} variant="primary">Comprar</Bto>
+          </div>
         </Card>
     </>
   )
