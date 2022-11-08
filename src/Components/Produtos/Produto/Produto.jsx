@@ -34,13 +34,13 @@ export const Produto = ({ produto}) => {
   return (
     <>
         <Card style={ containerStyle } id={produto.id}>
-          <Card.Img variant="top" style={ imgStyle } src={produto.image} />
+          <Card.Img variant="top" style={ imgStyle } src={produto.imagemUrl} />
           <Card.Body style={bodyStyle}>
-            <Card.Title>{produto.name}</Card.Title>
+            <Card.Title>{produto.nome}</Card.Title>
             <Card.Text>
-                {produto.description}
+                {produto.descricao}
             </Card.Text>
-            <Card.Subtitle style={ subTitle }>Valor R$<span> {produto.price}</span></Card.Subtitle>
+            <Card.Subtitle style={ subTitle }>Valor R$<span> {produto.valorUnitario}</span></Card.Subtitle>
             <Button onClick={add(produto)} variant="primary">Buy</Button>
           </Card.Body>
         </Card>

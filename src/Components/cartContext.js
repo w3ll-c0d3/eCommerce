@@ -10,7 +10,11 @@ export const CartProvider = ({children}) =>{
             setCart(JSON.parse(cartLocal))
         }
     },[])
+
+    const [prods, setProds] = useState([])
+
     const addToCart = produto =>{
+        setProds(produto.id)
         setCart(old => {
         let qtd = 0
         if(old[produto.id]) {
@@ -27,8 +31,36 @@ export const CartProvider = ({children}) =>{
         return newCart
       })
     }
+    
+    const rmvFromCart = (produtoid) =>{
+        setCart(old =>{
+            const newCart ={}
+            Object.keys(old).forEach(id =>{
+                if(id !== produtoid){
+                    newCart[id] = old[id]
+                }
+            })
+            window.localStorage.setItem('cart', JSON.stringify(newCart))
+            return newCart
+        })
+    }
+    const changeQtd = (produtoid, newQtd) =>{
+        setCart(old =>{
+            const newCart ={}
+            Object.keys(old).forEach(id =>{
+                const newProduto = {...old[id]}
+                if(id === produtoid){
+                    newProduto.qtd = newQtd
+                }
+                newCart[id] = newProduto
+            })
+            window.localStorage.setItem('cart', JSON.stringify(newCart))
+            return newCart
+        })
+    }
+
     return(
-        <CartContext.Provider value={{cart, addToCart}}>
+        <CartContext.Provider value={{cart, addToCart, rmvFromCart, changeQtd}}>
             {children}
         </CartContext.Provider>
     )
