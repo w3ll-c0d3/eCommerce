@@ -10,7 +10,5 @@ export { default as EditarProduto } from "./EditarProduto";
 export { default as DeletarProduto } from "./DeletarProduto";
 export { default as AdminCategoria } from "./CategoriasCadastro";
 export { default as AdminCategoriaEditar } from "./CategoriasEditar";
-export { default as AtualizarPedido } from "./AtualizarPedido";
 export { default as CadastroCliente } from "./CadastrarCliente";
-export { default as AtualizarCliente } from "./AtualizarCliente";
 export { default as DeletarCategoria } from "./DeletarCategoria";

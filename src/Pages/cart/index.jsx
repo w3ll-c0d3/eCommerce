@@ -16,6 +16,10 @@ import  Tudo from './style';
  const itemsCount = Object.keys(cart.cart).length
  let valorTotal = 0
 
+ function Comprei (){
+  alert("Parabéns, Agora é só aguardar e você receberá o seu produto!")
+  
+ }
   return (
     <>
       <Navigation />
@@ -107,7 +111,7 @@ import  Tudo from './style';
                     <h5>R${valorTotal}</h5>
                   </div>
                   <button type="button" className="btn btn-dark btn-block btn-lg"
-                    data-mdb-ripple-color="dark">Comprar</button>
+                    data-mdb-ripple-color="dark" onClick={Comprei}>Comprar</button>
 
                 </div>
               </div>
