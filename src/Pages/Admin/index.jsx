@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import './style.css';
-import { Section } from "./style.js";
+import { Section, ButtonStyled } from "./style.js";
 import { Footer, Navigation, CadastrarProdutos, EditarProduto, DeletarProduto, AdminCategoria, AdminCategoriaEditar, AtualizarPedido, AtualizarCliente, CadastroCliente, DeletarCategoria } from "../../Components";
 
 const AdminIndex = () => {
@@ -20,17 +20,17 @@ const AdminIndex = () => {
                 <h2>Admin</h2>
                 <div className="col">
                     <a href="#categorias-sec">
-                        <button type="button" className="button-options-cadastrar2">Categorias</button>
+                        <ButtonStyled type="button" className="button-options-cadastrar2">Categorias</ButtonStyled>
                     </a>
                 </div>
                 <div className="col">
                     <a href="#clientes-sec" >
-                        <button type="button" className="button-options-editar">Clientes</button>
+                        <ButtonStyled type="button" className="button-options-editar">Clientes</ButtonStyled>
                     </a>
                 </div>
                 <div className="col">
                     <a href="#produtos-sec">
-                        <button type="button" className="button-options-view">Produtos</button>
+                        <ButtonStyled type="button" className="button-options-view">Produtos</ButtonStyled>
                     </a>
                 </div>
             </div>
