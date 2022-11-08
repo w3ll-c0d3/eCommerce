@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Form } from 'react-bootstrap';
 import './style.css';
+import Button from 'react-bootstrap/Button';
 import { ecommerceAPI } from "../../Services";
 
 const AdminCategoria = (props) => {
@@ -36,7 +37,7 @@ const AdminCategoria = (props) => {
             <label>Descrição:</label>
             <textarea type="text" onChange={getDescricao}/>
           </div>
-          <button type="button" class="button-options-cadastrar" onClick={postCategoria}>Salvar</button>
+          <Button type="button" class="button-options-cadastrar" onClick={postCategoria}>Salvar</Button>
         </Form>
       </Container>
       </>

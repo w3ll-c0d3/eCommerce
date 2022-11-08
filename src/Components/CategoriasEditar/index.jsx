@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import { Form } from 'react-bootstrap';
 import './style.css';
 import { ecommerceAPI } from "../../Services";
-
+import Button from 'react-bootstrap/Button';
 
 const AdminCategoriaEditar = () => {
     const [nome, setNome] = useState(null)
@@ -46,7 +46,7 @@ const AdminCategoriaEditar = () => {
             <label>Descrição:</label>
             <textarea type="text" onChange={getDescricao}/>
           </div>
-          <button type="button" class="button-options-cadastrar" onClick={updateCategoria}>Salvar</button>
+          <Button type="button" class="button-options-cadastrar" onClick={updateCategoria}>Salvar</Button>
         </Form>
       </Container>
       </>

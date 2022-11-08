@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import { Form } from 'react-bootstrap';
 import './style.css';
 import { ecommerceAPI } from "../../Services";
+import Button from 'react-bootstrap/Button';
 
 
 const DeletarCategoria = () => {
@@ -45,7 +46,7 @@ const DeletarCategoria = () => {
             <label>Descrição:</label>
             <textarea type="text" onChange={getDescricao} disabled/>
           </div>
-          <button type="button" class="button-options-cadastrar" onClick={deletarCategoria}>Salvar</button>
+          <Button type="button" class="button-options-cadastrar" onClick={deletarCategoria}>Salvar</Button>
         </Form>
       </Container>
       </>
