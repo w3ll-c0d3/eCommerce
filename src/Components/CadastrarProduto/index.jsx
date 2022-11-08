@@ -82,7 +82,7 @@ const CadastrarProduto = props => {
 
       <Form.Group className="mb-3" controlId="formGridDescription">
         <Form.Label >Data Cadastro</Form.Label>
-        <Form.Control id="dataCad" placeholder="Data Cadastro" onChange={getDataCadastro} value={props.data} />
+        <Form.Control type="text" value={dataCadastro} placeholder="AAAA/MM/DD" onChange={(e) => setDataCadastro(e.target.value)} />
       </Form.Group>
 
       <Row className="mb-3">
