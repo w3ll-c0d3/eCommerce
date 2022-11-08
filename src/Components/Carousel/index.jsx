@@ -7,7 +7,7 @@ function SlideCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png" height="600px"
+              src="https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png" height="300px"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -18,7 +18,7 @@ function SlideCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png" height="600px"
+              src="https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png" height="300px"
               alt="Second slide"
             />
 
@@ -30,7 +30,7 @@ function SlideCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png" height="600px"
+              src="https://png.pngitem.com/pimgs/s/555-5550642_nike-shoe-png-transparent-png.png" height="300px"
               alt="Third slide"
             />
 
